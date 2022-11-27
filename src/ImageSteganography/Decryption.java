@@ -1,6 +1,6 @@
 package ImageSteganography;
 
-//DecodeMessage.java
+
  import java.awt.image.*;
  import javax.swing.*;
  import java.awt.*;
