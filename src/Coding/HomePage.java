@@ -4,14 +4,10 @@ import Audio_Steganography.Decode_Audio;
 import Audio_Steganography.Encode_Audio;
 import ImageSteganography.Decryption;
 import ImageSteganography.Encryption;
-import TextSteganography.Text_Decryption;
-import TextSteganography.Text_Encryption;
+
 import java.awt.Color;
 
-/**
- *
- * @author Hadi
- */
+
 public class HomePage extends javax.swing.JFrame {
 
     /**
@@ -32,7 +28,7 @@ public class HomePage extends javax.swing.JFrame {
 
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        //jButton2 = new javax.swing.JButton();
         jButtonDecodeAudio = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -42,8 +38,8 @@ public class HomePage extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButtonEncodeAudio = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        //jButton7 = new javax.swing.JButton();
+        //jButton8 = new javax.swing.JButton();
 
         jButton3.setText("jButton1");
 
@@ -51,16 +47,16 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(149, 171, 166));
 
-        jButton2.setFont(new java.awt.Font("Algerian", 1, 30)); // NOI18N
-        jButton2.setText("Decode Text");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+//        jButton2.setFont(new java.awt.Font("Algerian", 1, 30)); // NOI18N
+//        jButton2.setText("Decode Text");
+//        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        jButton2.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton2ActionPerformed(evt);
+//            }
+//        });
 
-        jButtonDecodeAudio.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jButtonDecodeAudio.setFont(new java.awt.Font("Times new roman", 1, 36)); // NOI18N
         jButtonDecodeAudio.setText("Decode Audio");
         jButtonDecodeAudio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonDecodeAudio.addActionListener(new java.awt.event.ActionListener() {
@@ -69,52 +65,52 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(160, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(100, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, java.awt.Color.lightGray));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times new roman", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("SteganoGraphy Project");
+        jLabel1.setText("Steganography");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/programer.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/crypt.jpg"))); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel2MouseEntered(evt);
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0)); //last bar
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        //jLabel3.setFont(new java.awt.Font("Times new roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Programmed By Hadi Khedri");
+
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
 
-        jButton5.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Times new roman", 1, 34)); // NOI18N
         jButton5.setForeground(new java.awt.Color(32, 32, 32));
         jButton5.setText("Encode Image");
         jButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -130,7 +126,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Times new roman", 1, 36)); // NOI18N
         jButton6.setForeground(new java.awt.Color(23, 23, 23));
         jButton6.setText("Decode Image");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -145,7 +141,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jButtonEncodeAudio.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jButtonEncodeAudio.setFont(new java.awt.Font("Times new roman", 1, 36)); // NOI18N
         jButtonEncodeAudio.setText("Encode Audio");
         jButtonEncodeAudio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonEncodeAudio.addActionListener(new java.awt.event.ActionListener() {
@@ -154,23 +150,23 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Algerian", 1, 30)); // NOI18N
-        jButton7.setText("Encode Text");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
+//        jButton7.setFont(new java.awt.Font("Algerian", 1, 30)); // NOI18N
+//        jButton7.setText("Encode Text");
+//        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        jButton7.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton7ActionPerformed(evt);
+//            }
+//        });
 
-        jButton8.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        jButton8.setText("Send Email");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
+//        jButton8.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+//        jButton8.setText("Send Email");
+//        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        jButton8.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton8ActionPerformed(evt);
+//            }
+//        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -186,18 +182,18 @@ public class HomePage extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                             .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonEncodeAudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                             .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonDecodeAudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                 .addGap(134, 134, 134))
         );
         jPanel1Layout.setVerticalGroup(
@@ -215,15 +211,13 @@ public class HomePage extends javax.swing.JFrame {
                             .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonDecodeAudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonEncodeAudio, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
@@ -249,7 +243,7 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
 
-        jButton2.setBackground(Color.lightGray);
+        //jButton2.setBackground(Color.lightGray);
     }//GEN-LAST:event_jButton5MouseEntered
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -269,25 +263,6 @@ public class HomePage extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Text_Encryption te = new Text_Encryption();
-        te.setVisible(true);
-        te.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        Text_Decryption td = new Text_Decryption();
-        td.setVisible(true);
-        td.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        SendEmail se = new SendEmail();
-        se.setVisible(true);
-        se.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton8ActionPerformed
-
     private void jButtonEncodeAudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEncodeAudioActionPerformed
         Encode_Audio ea = new Encode_Audio();
         ea.setVisible(true);
@@ -304,11 +279,7 @@ public class HomePage extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -317,17 +288,18 @@ public class HomePage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreenFrame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreenFrame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreenFrame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreenFrame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -337,12 +309,12 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    //private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    //private javax.swing.JButton jButton7;
+    //private javax.swing.JButton jButton8;
     private javax.swing.JButton jButtonDecodeAudio;
     private javax.swing.JButton jButtonEncodeAudio;
     private javax.swing.JLabel jLabel1;

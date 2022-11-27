@@ -1,6 +1,5 @@
 
 package Audio_Steganography;
-import Coding.SendEmail;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.io.ByteArrayInputStream;
@@ -33,10 +32,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
-/**
- *
- * @author Hadi
- */
+
 public class Encode_Audio extends javax.swing.JFrame {
 
     private static final String algorithm = "PBEWithMD5AndDES";
@@ -104,7 +100,7 @@ public class Encode_Audio extends javax.swing.JFrame {
         jButtonEncode = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
         jLabelEmbedded = new javax.swing.JLabel();
-        jButtonSend = new javax.swing.JButton();
+        //jButtonSend = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jButtonOpenDecoder = new javax.swing.JButton();
@@ -180,14 +176,14 @@ public class Encode_Audio extends javax.swing.JFrame {
         jLabelEmbedded.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmbedded.setText("hh:mm:ss");
 
-        jButtonSend.setFont(new java.awt.Font("Aharoni", 1, 24)); // NOI18N
-        jButtonSend.setText("Send");
-        jButtonSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonSend.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSendActionPerformed(evt);
-            }
-        });
+//        jButtonSend.setFont(new java.awt.Font("Aharoni", 1, 24)); // NOI18N
+//        jButtonSend.setText("Send");
+//        jButtonSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        jButtonSend.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButtonSendActionPerformed(evt);
+//            }
+//        });
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -231,7 +227,7 @@ public class Encode_Audio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Encoded Succesfully !");
+        jLabel2.setText("Encoded Successfully !");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -265,7 +261,7 @@ public class Encode_Audio extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButtonSend, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButtonOpenDecoder, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
@@ -301,8 +297,7 @@ public class Encode_Audio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonSend, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButtonEncode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonOpenDecoder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -371,14 +366,14 @@ public class Encode_Audio extends javax.swing.JFrame {
 		stopPlayingEncoded();			
     }//GEN-LAST:event_jButtonPlayEncodedAudioActionPerformed
 
-    private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
-        
-        SendEmail se = new SendEmail();
-        se.setVisible(true);
-        se.setLocationRelativeTo(null);
-        se.pack();
-        
-    }//GEN-LAST:event_jButtonSendActionPerformed
+//    private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
+//
+//        SendEmail se = new SendEmail();
+//        se.setVisible(true);
+//        se.setLocationRelativeTo(null);
+//        se.pack();
+//
+//    }//GEN-LAST:event_jButtonSendActionPerformed
 
  /************* Start recording sound, the time will count up. *************/
 	private void startRecording() {
@@ -630,7 +625,7 @@ class CaptureThread extends Thread{
       
                 SaveEncodeAudio = fc.getSelectedFile().getAbsolutePath();
         
-/************** now write the byte array to an audio file. ************************/ 
+/************** now write the byte array to an audio file. ************************/
                 File fileOut = new File(SaveEncodeAudio);
 		ByteArrayInputStream byteIS = new ByteArrayInputStream(audioBytes);
 		AudioInputStream audioIS = new AudioInputStream(byteIS,
@@ -894,7 +889,7 @@ class CaptureThread extends Thread{
     private javax.swing.JButton jButtonPlayEncodedAudio;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JButton jButtonSelectAudio;
-    private javax.swing.JButton jButtonSend;
+    //private javax.swing.JButton jButtonSend;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

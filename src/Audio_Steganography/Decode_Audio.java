@@ -5,7 +5,6 @@
  */
 package Audio_Steganography;
 
-import Coding.SendEmail;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,16 +27,13 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Hadi
- */
+
 public class Decode_Audio extends javax.swing.JFrame {
 
     private static final String algorithm = "PBEWithMD5AndDES";
     byte[] plainTextBytes;
     private char password[];
-    private byte[] audioBytes;
+    private int[] audioBytes;
     
     public Decode_Audio() {
         initComponents();
@@ -64,7 +60,7 @@ public class Decode_Audio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButtonDecode = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
-        jButtonSend = new javax.swing.JButton();
+        //jButtonSend = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -127,13 +123,13 @@ public class Decode_Audio extends javax.swing.JFrame {
             }
         });
 
-        jButtonSend.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonSend.setText("Send");
-        jButtonSend.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSendActionPerformed(evt);
-            }
-        });
+//        jButtonSend.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+//        jButtonSend.setText("Send");
+//        jButtonSend.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButtonSendActionPerformed(evt);
+//            }
+//        });
 
         jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonReset.setText("Reset");
@@ -157,7 +153,7 @@ public class Decode_Audio extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSend, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -189,7 +185,7 @@ public class Decode_Audio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonDecode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                    .addComponent(jButtonSend, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                     .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -230,12 +226,12 @@ public class Decode_Audio extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonSaveActionPerformed
 
-    private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
-        SendEmail se = new SendEmail();
-        se.setVisible(true);
-        se.setLocationRelativeTo(null);
-        se.pack();
-    }//GEN-LAST:event_jButtonSendActionPerformed
+//    private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
+//        SendEmail se = new SendEmail();
+//        se.setVisible(true);
+//        se.setLocationRelativeTo(null);
+//        se.pack();
+//    }//GEN-LAST:event_jButtonSendActionPerformed
     
     
 /**************************** Open File or Save File . ****************************/
@@ -315,9 +311,11 @@ public class Decode_Audio extends javax.swing.JFrame {
 }
     
     
-/** ========================= Decode_Text Method. ==============================.*/
+/**
+ * ========================= Decode_Text Method. ==============================.
+ */
     
-    private byte[] decode_text(byte[] data) {
+    private byte[] decode_text(int[] data) {
 	
 		int length = 0;
 		int offset = 32;
@@ -354,7 +352,7 @@ public class Decode_Audio extends javax.swing.JFrame {
      * @param password
      * @return 
      */
-public byte[] decrypt(byte[] cipherText, char password[]) {
+public byte[] decrypt(byte[] cipherText, char[] password) {
 
 	System.out.println("Decrypting the cipher message: "
 			+ new String(cipherText));
@@ -422,12 +420,12 @@ public byte[] decrypt(byte[] cipherText, char password[]) {
      * @param audioFilePath
      * @return 
 **/
-	public static byte[] readAudio(String audioFilePath) {
+	public static int[] readAudio(String audioFilePath) {
 
 		System.out.println("Reading the audio file......");
 
 		AudioInputStream audioInputStream = null;
-		byte[] audioBytes = null;
+		int[] audioBytes = null;
 		File audioFile = new File(audioFilePath);
 
 		try {
@@ -435,11 +433,11 @@ public byte[] decrypt(byte[] cipherText, char password[]) {
 			int bytesPerFrame = audioInputStream.getFormat().getFrameSize();
 			// Set an arbitrary buffer size of 1024 frames.
 			int numBytes = 154600 * bytesPerFrame;
-			audioBytes = new byte[numBytes];
+			audioBytes = new int[numBytes];
 
 			try {
 
-				audioInputStream.read(audioBytes);
+                audioInputStream.read();
 
 			} catch (Exception ex) {
 				System.out.println("Audio file error:" + ex);
@@ -500,7 +498,7 @@ public byte[] decrypt(byte[] cipherText, char password[]) {
     private javax.swing.JButton jButtonReset;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JButton jButtonSelectAudio;
-    private javax.swing.JButton jButtonSend;
+    //private javax.swing.JButton jButtonSend;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
